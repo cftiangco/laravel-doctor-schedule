@@ -14,11 +14,13 @@ class Button extends Component
     public $skin = "";
     public $label = "";
     public $type = "";
-    public function __construct($skin = "primary",$label = "Submit",$type="submit")
+    public $onClick;
+    public function __construct($skin = "primary",$label = "Submit",$type="submit",$onClick = "")
     {
         $this->skin = $skin;
         $this->label = $label;
         $this->type = $type;
+        $this->onClick = $onClick;
     }
 
     /**

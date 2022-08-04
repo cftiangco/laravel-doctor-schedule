@@ -13,7 +13,13 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        return view('admin.doctor.index');
+        $specialties = [
+            ['id' => 1, 'description' => 'Cake'],
+            ['id' => 2, 'description' => 'Salad'],
+            ['id' => 3, 'description' => 'Juice'],
+        ];
+        $data['specialties'] = $specialties;
+        return view('admin.doctor.index',$data);
     }
 
     /**

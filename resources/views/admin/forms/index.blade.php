@@ -1,5 +1,11 @@
 @extends('layouts.master')
-
+<?php 
+    $data = [
+       ['id' => 1, 'description' => 'Cake'],
+       ['id' => 2, 'description' => 'Salad'],
+       ['id' => 3, 'description' => 'Juice'],
+    ];
+?>
 
 @section('content')
 <div class="container-lg m-3">
@@ -28,6 +34,7 @@
             <x-button type="submit"/>
             <x-button label="Delete" skin="danger" />
 
+            <x-dropdown-option class="w-full" label="Specialties" :rows=$data/>
         </div>
     </div>
 
